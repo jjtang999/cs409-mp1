@@ -4,10 +4,224 @@
         <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
+        <title>Tom Brady Fan Page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     </head>
     <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
+        <header id="home">
+            <nav id="navbar">
+                <div class="logo">TB12</div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#career">Career</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#stats">Stats</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hero">
+                <h1>TOM BRADY</h1>
+                <h2>The GOAT of Football</h2>
+                <div class="cta-button">
+                    <a href="#career" class="cta">Explore Career</a>
+                </div>
+            </div>
+        </header>
+
+        <section id="career" class="section">
+            <div class="container">
+                <h2 class="section-title">Legendary Career</h2>
+                <div class="multi-column">
+                    <div class="column">
+                        <h3>New England Patriots</h3>
+                        <p>Tom Brady spent 20 seasons with the New England Patriots, leading the team to an unprecedented era of success with 6 Super Bowl championships. Drafted in the sixth round of the 2000 NFL Draft, Brady became the starter in 2001 and led the Patriots to their first Super Bowl victory that same season.</p>
+                        <p>During his time with the Patriots, Brady established himself as one of the greatest quarterbacks in NFL history, setting numerous records and consistently leading his team to the playoffs.</p>
+                    </div>
+                    <div class="column">
+                        <h3>Tampa Bay Buccaneers</h3>
+                        <p>In 2020, Brady signed with the Tampa Bay Buccaneers, bringing his talents to a new team after two decades with the Patriots. In his first season with the Buccaneers, Brady led the team to a Super Bowl victory, earning his 7th championship ring.</p>
+                        <p>This historic achievement solidified Brady's status as the greatest quarterback of all time, proving he could succeed outside of the Patriots' system and contributing to his legacy as the most accomplished player in NFL history.</p>
+                    </div>
+                    <div class="column">
+                        <h3>Retirement & Legacy</h3>
+                        <p>After announcing his retirement in February 2022, Brady shocked the world by returning for another season with the Buccaneers. Following the 2022 season, Brady announced his retirement "for good," ending an illustrious 23-year NFL career.</p>
+                        <p>His legacy extends beyond his on-field achievements, with ventures including the TB12 Method, a holistic approach to health and wellness, and various business endeavors. He has since transitioned into broadcasting, signing a deal to become a lead NFL analyst.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="achievements" class="section parallax-section">
+            <div class="container">
+                <h2 class="section-title">Unparalleled Achievements</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <i class="fas fa-trophy"></i>
+                        <h3>7 Super Bowl Rings</h3>
+                        <p>Most championships by any player in NFL history</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-medal"></i>
+                        <h3>5 Super Bowl MVPs</h3>
+                        <p>Most Super Bowl MVP awards of any player</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-award"></i>
+                        <h3>3 NFL MVP Awards</h3>
+                        <p>Recognized as the league's most valuable player</p>
+                    </div>
+                    <div class="achievement-card">
+                        <i class="fas fa-star"></i>
+                        <h3>15 Pro Bowl Selections</h3>
+                        <p>Selected among the NFL's best players</p>
+                    </div>
+                </div>
+                <div class="cta-button">
+                    <button id="achievements-modal-btn" class="modal-btn">View More Achievements</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="achievements-modal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Tom Brady's Complete Trophy Case</h2>
+                <ul class="achievements-list">
+                    <li>7× Super Bowl champion (XXXVI, XXXVIII, XXXIX, XLIX, LI, LIII, LV)</li>
+                    <li>5× Super Bowl MVP (XXXVI, XXXVIII, XLIX, LI, LV)</li>
+                    <li>3× NFL Most Valuable Player (2007, 2010, 2017)</li>
+                    <li>2× NFL Offensive Player of the Year (2007, 2010)</li>
+                    <li>NFL Comeback Player of the Year (2009)</li>
+                    <li>3× First-team All-Pro (2007, 2010, 2017)</li>
+                    <li>3× Second-team All-Pro (2005, 2016, 2021)</li>
+                    <li>15× Pro Bowl selection</li>
+                    <li>NFL 2000s All-Decade Team</li>
+                    <li>NFL 2010s All-Decade Team</li>
+                    <li>NFL 100th Anniversary All-Time Team</li>
+                    <li>New England Patriots All-2000s Team</li>
+                    <li>New England Patriots 50th Anniversary Team</li>
+                    <li>New England Patriots All-Dynasty Team</li>
+                    <li>Most career quarterback wins (251)</li>
+                    <li>Most career passing touchdowns (649)</li>
+                    <li>Most career passing yards (89,214)</li>
+                </ul>
+            </div>
+        </div>
+
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2 class="section-title">Career Highlights Gallery</h2>
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-slide">
+                            <img src="./assets/tom-brady1.jpg" alt="Tom Brady Super Bowl">
+                            <div class="slide-caption">Super Bowl Victory with the Patriots</div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./assets/tom-brady2.jpg" alt="Tom Brady Buccaneers">
+                            <div class="slide-caption">Leading the Buccaneers to Victory</div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="./assets/tom-brady3.jpg" alt="Tom Brady GOAT">
+                            <div class="slide-caption">The Greatest of All Time</div>
+                        </div>
+                    </div>
+                    <button class="carousel-arrow prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carousel-arrow next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="stats" class="section">
+            <div class="container">
+                <h2 class="section-title">Career Statistics</h2>
+                <div class="stats-container">
+                    <div class="video-container">
+                        <video controls width="100%" height="auto">
+                            <source src="./assets/goat-video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <p class="video-caption">The GOAT (Greatest Of All Time)</p>
+                    </div>
+                    <div class="stats-info">
+                        <h3>Remarkable Career Numbers</h3>
+                        <div class="stat-item">
+                            <div class="stat-value">89,214</div>
+                            <div class="stat-label">Passing Yards</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">649</div>
+                            <div class="stat-label">Touchdown Passes</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">251</div>
+                            <div class="stat-label">Career Wins</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">67.2%</div>
+                            <div class="stat-label">Completion Percentage</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Join the Fan Club</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Connect With Other Fans</h3>
+                        <p>Join our community of Tom Brady fans to discuss his legacy, share memories, and stay updated with the latest news.</p>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/TomBrady" target="_blank"><i class="fab fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/tombrady" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://twitter.com/TomBrady" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com/user/tombrady" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Subscribe to Updates</h3>
+                        <form id="fan-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" placeholder="Your Email">
+                            </div>
+                            <button type="submit" class="submit-btn">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">TB12</div>
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#career">Career</a>
+                        <a href="#achievements">Achievements</a>
+                        <a href="#gallery">Gallery</a>
+                        <a href="#stats">Stats</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/TomBrady" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/tombrady" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/TomBrady" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/user/tombrady" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Tom Brady Fan Page. This is a fan-made website for educational purposes.</p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
