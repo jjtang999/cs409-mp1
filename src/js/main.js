@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // References to elements
+
   const navbar = document.getElementById('navbar');
   const navLinks = document.querySelectorAll('.nav-links a');
   const sections = document.querySelectorAll('section');
@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const prevBtn = document.querySelector('.carousel-arrow.prev');
   const nextBtn = document.querySelector('.carousel-arrow.next');
   
-  // Navbar functionality - shrink on scroll
   function toggleNavbarSize() {
     if (window.scrollY === 0) {
       navbar.classList.add('expanded');
@@ -19,24 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   
-  // Initialize navbar size
   toggleNavbarSize();
   
-  // Position indicator - highlight active section in navbar
   function highlightActiveSection() {
     let scrollPosition = window.scrollY;
     
-    // Get navbar height for offset calculation
     const navHeight = navbar.offsetHeight;
     
     // Check each section to determine which one is currently visible
     sections.forEach(section => {
-      // Adjust the threshold to be more accurate
-      const sectionTop = section.offsetTop - navHeight - 50; // Increased offset buffer
+      const sectionTop = section.offsetTop - navHeight - 50;
       const sectionBottom = sectionTop + section.offsetHeight;
       
       if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
-        // Find the corresponding nav link and set it active
         const id = section.getAttribute('id');
         
         navLinks.forEach(link => {
@@ -48,7 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
     
-    // Special case for highlighting home when at the very top
     if (scrollPosition < 100) {
       navLinks.forEach(link => {
         link.classList.remove('active');
@@ -58,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
     
-    // Special case for highlighting last item when at the bottom of page
     const bottomOfPage = document.body.offsetHeight - window.innerHeight - 10;
     if (scrollPosition >= bottomOfPage) {
       navLinks.forEach(link => {
@@ -70,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   
-  // Initialize highlighted section
+  // Init highlighted section
   highlightActiveSection();
   
   // Smooth scrolling functionality
@@ -82,7 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const targetElement = document.querySelector(targetId);
       const navbarHeight = navbar.offsetHeight;
       
-      // Add a small offset to ensure the section is fully visible
       const offsetPosition = targetElement.offsetTop - navbarHeight + 2; 
       
       window.scrollTo({
@@ -90,28 +81,27 @@ document.addEventListener('DOMContentLoaded', () => {
         behavior: 'smooth'
       });
       
-      // Instead of immediately updating active class, wait for scrolling to complete
       setTimeout(() => {
         highlightActiveSection();
-      }, 500); // Half-second delay to let scroll settle
+      }, 500);
     });
   });
   
   // Modal functionality
   modalBtn.addEventListener('click', () => {
     modal.style.display = 'block';
-    document.body.style.overflow = 'hidden'; // Prevent scrolling behind modal
+    document.body.style.overflow = 'hidden';
   });
   
   closeBtn.addEventListener('click', () => {
     modal.style.display = 'none';
-    document.body.style.overflow = 'auto'; // Restore scrolling
+    document.body.style.overflow = 'auto';
   });
   
   window.addEventListener('click', (e) => {
     if (e.target === modal) {
       modal.style.display = 'none';
-      document.body.style.overflow = 'auto'; // Restore scrolling
+      document.body.style.overflow = 'auto';
     }
   });
   
